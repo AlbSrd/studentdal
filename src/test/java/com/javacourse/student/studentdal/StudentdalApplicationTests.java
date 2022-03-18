@@ -20,5 +20,10 @@ class StudentdalApplicationTests {
         student.setFee(13d);
         repo.save(student);
     }
-    
+
+    @Test
+    void testFindStudentById() {
+        Student student;
+        student = repo.findById(1l).get();
+    }
 }
